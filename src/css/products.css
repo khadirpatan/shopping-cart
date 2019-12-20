@@ -1,0 +1,156 @@
+.productsContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  width: 60%;
+  border-bottom: 2px solid lightgrey;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.productsLeft {
+  /* border: 1px solid lightgrey; */
+  width: 30%;
+  padding: 20px;
+}
+
+.productsRight {
+  /* border: 1px solid lightgrey; */
+  width: 70%;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.productImage {
+  height: 150px;
+  width: 150px;
+}
+
+.productTitle {
+  color: green;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+}
+
+.productDetails {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.addingToCart {
+  display: flex;
+  flex-direction: row;
+}
+
+.addToCartDiv {
+  width: 35%;
+  padding-top: 10px;
+}
+.addTocartBtn {
+  padding: 8px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 4px;
+  color: white;
+}
+.addTocartBtn:hover {
+  background-color: #28a745;
+  cursor: pointer;
+}
+
+.incrimentDecerementDiv {
+  width: 35%;
+  padding: 13px 0px 0px 40px;
+}
+
+.roundBorder {
+  border: 1px solid green;
+  /* height: 20px; */
+  /* width: 20px; */
+  border-radius: 50%;
+  padding: 2px 2px 5px 10px;
+  font-size: 25px;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+}
+.roundBorder2 {
+  border: 1px solid green;
+  /* height: 20px; */
+  /* width: 20px; */
+  border-radius: 50%;
+  padding: 2px 12px 5px 10px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+
+  background-color: green;
+}
+
+.roundBorder:hover,
+.roundBorder2:hover {
+  background-color: #28a745;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 631px) and (max-width: 1200px) {
+  .productsContainer {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid lightgrey;
+    width: 85%;
+    /* position: relative; */
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .productsContainer {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid lightgrey;
+    width: 85%;
+    /* position: relative; */
+  }
+  .addingToCart {
+    display: flex;
+    flex-direction: column;
+  }
+  .productsLeft {
+    width: 100%;
+    padding: 0px;
+  }
+  .productsRight {
+    /* border: 1px solid lightgrey; */
+    width: 100%;
+    padding: 0px;
+  }
+  .productImage {
+    height: 120px;
+    width: 120px;
+  }
+  .addToCartDiv {
+    width: 100%;
+    text-align: center;
+  }
+
+  .addTocartBtn {
+    padding: 8px;
+    width: 80%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+  }
+  .incrimentDecerementDiv {
+    width: 100%;
+    padding: 15px 0px;
+    text-align: center;
+  }
+}

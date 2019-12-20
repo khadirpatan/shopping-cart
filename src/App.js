@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Container from "./components/Container";
 
 function App() {
+  const [productData, setProductData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch("data.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        // Work with JSON data here
+        setProductData(data.productData);
+      })
+
+      .catch(err => {
+        setError("Error While Getting Data");
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {error ? (
+        <div> Error White Getting Data</div>
+      ) : (
+        <Container productData={productData} />
+      )}
     </div>
   );
 }

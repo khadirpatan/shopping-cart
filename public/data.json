@@ -1,0 +1,104 @@
+{
+  "productData": [
+    {
+      "id": "1",
+      "brandName": "Nadini",
+      "productName": " Nandini Pure Ghee (pouch)",
+      "quantity": "500 ml",
+      "price": "225",
+      "mrp": "250",
+      "imgUrl": "nandini.jpg",
+      "OfferText": "10% Off"
+    },
+    {
+      "id": "2",
+      "brandName": "Mother's Dairy",
+      "productName": " Motheris daily Pure Ghee (Pouch)",
+      "quantity": "1 ltr",
+      "price": "435",
+      "mrp": "450",
+      "imgUrl": "mothersDairy.jpg",
+      "OfferText": "3% Off"
+    },
+    {
+      "id": "3",
+      "brandName": "Patanjali ",
+      "productName": " Patanjali Cow's Ghee (Cartoon)",
+      "quantity": "1 ltr",
+      "price": "550",
+      "mrp": "550",
+      "imgUrl": "patanjali.jpg",
+      "OfferText": ""
+    },
+    {
+      "id": "4",
+      "brandName": "Amul",
+      "productName": " Amul Pure Ghee (Cartoon)",
+      "quantity": "1 ltr",
+      "price": "445",
+      "mrp": "445",
+      "imgUrl": "amul.jpg",
+      "OfferText": ""
+    },
+    {
+      "id": "5",
+      "brandName": "Nestle",
+      "productName": "Nestle Everyday Shahi Ghee (Cartoon)",
+      "quantity": "1 ltr",
+      "price": "449",
+      "mrp": "475",
+      "imgUrl": "nestle.jpg",
+      "OfferText": "5% Off"
+    },
+    {
+      "id": "6",
+      "brandName": "Aashirvaad",
+      "productName": "Aashirvaad Svasti Ghee Pet (Box)",
+      "quantity": "1 ltr",
+      "price": "542",
+      "mrp": "640",
+      "imgUrl": "aashirvad.jpg",
+      "OfferText": "15% Off"
+    },
+    {
+      "id": "7",
+      "brandName": "Amrutam",
+      "productName": "Amrutam Cow Desi-Ghee, Grass-Fed Ghee (Container) ",
+      "quantity": "2 ltr",
+      "price": "1925",
+      "mrp": "2070",
+      "imgUrl": "amrutam.jpg",
+      "OfferText": "7% Off"
+    },
+    {
+      "id": "8",
+      "brandName": "Fresh & Pure",
+      "productName": " Fresh & Pure Desi Ghee PP (Cartoon)",
+      "quantity": "1 ltr",
+      "price": "480",
+      "mrp": "480",
+      "imgUrl": "fresh.jpg",
+      "OfferText": ""
+    },
+    {
+      "id": "9",
+      "brandName": "Sri Sri",
+      "productName": "Sri Sri Tattva Cow's Pure Ghee (Cartton)",
+      "quantity": "1 ltr",
+      "price": "572",
+      "mrp": "590",
+      "imgUrl": "srisri.jpg",
+      "OfferText": "3% Off"
+    },
+    {
+      "id": "10",
+      "brandName": "Akiva Love",
+      "productName": "Akiva Love 100% Pure Desi A2 Cow Ghee from Bilona Method (Glass)",
+      "quantity": "350 ml",
+      "price": "515",
+      "mrp": "895",
+      "imgUrl": "akiva.jpg",
+      "OfferText": "42% Off"
+    }
+  ]
+}
