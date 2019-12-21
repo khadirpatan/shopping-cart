@@ -67,6 +67,9 @@ const Modal = props => {
                 = &#8377; {cartItem.quantity * cartItem.price}
               </div>
             ))}
+            <div className="totalAmount">
+              Total Price : &#8377; <strong>{props.price}</strong>
+            </div>
           </div>
         ) : null}
       </div>
