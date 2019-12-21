@@ -24,7 +24,20 @@
   max-height: 80vh;
   overflow-y: auto;
 }
+.orderSum {
+  padding: 10px;
+  border: 1px solid lightgrey;
+  /* box-shadow: 2px 2px 5px 1px lightgrey; */
+}
+.orderSumItem {
+  padding: 10px 0px;
+}
 
+.icon {
+  position: relative;
+
+  top: 7px;
+}
 .modalWindow::-webkit-scrollbar {
   width: 6px;
 }
