@@ -68,7 +68,7 @@ const Modal = props => {
               </div>
             ))}
             <div className="totalAmount">
-              Total Price : &#8377; <strong>{props.price}</strong>
+              Grand Total Price : &#8377; <strong>{props.price}</strong>
             </div>
           </div>
         ) : null}
