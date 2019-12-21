@@ -72,27 +72,20 @@
   background-color: crimson;
   border-radius: 50%;
   color: white;
+  cursor: pointer;
 }
 .add {
   padding: 5px;
   background-color: #28a745;
   border-radius: 50%;
   color: white;
+  cursor: pointer;
 }
 
 .count {
   position: relative;
   top: -3px;
   font-size: 1.4rem;
-}
-
-.add:hover {
-  background-color: green;
-  cursor: pointer;
-}
-.remove:hover {
-  background-color: #f75a36;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 631px) and (max-width: 1200px) {

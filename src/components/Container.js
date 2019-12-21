@@ -14,12 +14,9 @@ const Container = props => {
       if (cartItem.id === item.id) {
         found = true;
         cartItem.quantity++;
-        return cartItem;
-      } else {
-        return cartItem;
       }
+      return cartItem;
     });
-
     if (!found) {
       updatedCart.push({
         id: item.id,
@@ -33,18 +30,14 @@ const Container = props => {
   };
 
   const removeFromCart = item => {
-    let updatedCart = cart.map((cartItem, index) => {
+    let filteredCart = cart.filter(function(cartItem) {
       if (cartItem.id === item.id) {
-        if (cartItem.quantity >= 1) {
-          cartItem.quantity--;
-        }
-        return cartItem;
-      } else {
+        cartItem.quantity--;
+      }
+      if (cartItem.quantity >= 1) {
         return cartItem;
       }
-    });
-    let filteredCart = updatedCart.filter(function(item) {
-      return item.quantity > 0;
+      return false;
     });
     setCart([...filteredCart]);
   };

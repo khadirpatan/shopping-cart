@@ -11,10 +11,8 @@ const Footer = props => {
       let totalQty = 0;
       let totalPrice = 0;
       for (let product of props.cart) {
-        // console.log("FFF", product);
-        totalQty = Number(totalQty) + Number(product.quantity);
-        totalPrice =
-          totalPrice + Number(product.quantity) * Number(product.price);
+        totalQty += Number(product.quantity);
+        totalPrice += Number(product.quantity * product.price);
       }
       setQty(totalQty);
       setPrice(totalPrice);

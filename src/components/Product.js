@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/products.css";
 
 const Product = props => {
+  console.log("props.cart", props.cart);
   const { addToCart, removeFromCart, product, index } = props;
   const [count, setCount] = useState(0);
   const add = product => {
@@ -20,7 +21,13 @@ const Product = props => {
     if (props.clearCartClicked) {
       setCount(0);
     }
-  }, [props.clearCartClicked]);
+    let existingitem = props.cart.find(cartItem => cartItem.id === product.id);
+    if (existingitem && existingitem.quantity >= 1) {
+      setCount(existingitem.quantity);
+    } else {
+      setCount(0);
+    }
+  }, [props.clearCartClicked, props.cart, product.id]);
 
   return (
     <div className="productsContainer" key={index}>
@@ -43,7 +50,7 @@ const Product = props => {
         <div className="productDetails">
           {product.productName}
           <br></br>
-          {product.quantity}
+          {product.qty}
           <br></br>
           MRP {product.mrp}
           <br></br>
@@ -72,6 +79,7 @@ const Product = props => {
             </i>
             &nbsp;&nbsp;
             <span className="count">{count}</span>
+            {/* {props.cart.map(cartItem => cartItem.id)} */}
             &nbsp;&nbsp;
             <i
               className="material-icons add"
