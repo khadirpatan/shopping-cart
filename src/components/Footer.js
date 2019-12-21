@@ -7,7 +7,7 @@ const Footer = props => {
   const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
-    if (props.cart && props.cart.length >= 1) {
+    if (props.cart && props.cart.length >= 0) {
       let totalQty = 0;
       let totalPrice = 0;
       for (let product of props.cart) {
@@ -20,6 +20,7 @@ const Footer = props => {
       setPrice(totalPrice);
     }
   }, [props.cart]);
+
   return (
     <div className="footer">
       <div className="footerInnerDiv">
@@ -29,7 +30,12 @@ const Footer = props => {
           <div className="h4">Total : {price}</div>
         </div>
         <div className="right">
-          <button className="button" onClick={() => setOpenModal(true)}>
+          <button
+            type="submit"
+            className="button"
+            onClick={() => setOpenModal(true)}
+            // disabled={!props.cart.length >= 1}
+          >
             CHECKOUT
           </button>
         </div>
@@ -41,6 +47,10 @@ const Footer = props => {
           price={price}
           qty={qty}
           setOpenModal={setOpenModal}
+          addToCart={props.addToCart}
+          removeFromCart={props.removeFromCart}
+          setCart={props.setCart}
+          setClearCartClicked={props.setClearCartClicked}
         />
       ) : null}
     </div>

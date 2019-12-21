@@ -6,6 +6,7 @@ import Products from "./Products";
 
 const Container = props => {
   const [cart, setCart] = useState([]);
+  const [clearCartClicked, setClearCartClicked] = useState(false);
 
   const addToCart = item => {
     let found = false;
@@ -37,13 +38,15 @@ const Container = props => {
         if (cartItem.quantity >= 1) {
           cartItem.quantity--;
         }
-
         return cartItem;
       } else {
         return cartItem;
       }
     });
-    setCart(updatedCart);
+    let filteredCart = updatedCart.filter(function(item) {
+      return item.quantity > 0;
+    });
+    setCart([...filteredCart]);
   };
   return (
     <div className="container">
@@ -56,10 +59,17 @@ const Container = props => {
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           cart={cart}
+          clearCartClicked={clearCartClicked}
         />
       </div>
       <div style={{ width: "100%" }}>
-        <Footer cart={cart} />
+        <Footer
+          cart={cart}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          setCart={setCart}
+          setClearCartClicked={setClearCartClicked}
+        />
       </div>
     </div>
   );

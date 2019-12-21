@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/products.css";
 
 const Product = props => {
@@ -15,6 +15,13 @@ const Product = props => {
     }
     removeFromCart(product);
   };
+
+  useEffect(() => {
+    if (props.clearCartClicked) {
+      setCount(0);
+    }
+  }, [props.clearCartClicked]);
+
   return (
     <div className="productsContainer" key={index}>
       <div className="productsLeft">
@@ -55,7 +62,26 @@ const Product = props => {
             </button>
           </div>
           <div className="incrimentDecerementDiv">
-            <span
+            <i
+              className="material-icons remove"
+              onClick={() => {
+                remove(product);
+              }}
+            >
+              remove
+            </i>
+            &nbsp;&nbsp;
+            <span className="count">{count}</span>
+            &nbsp;&nbsp;
+            <i
+              className="material-icons add"
+              onClick={() => {
+                add(product);
+              }}
+            >
+              add
+            </i>
+            {/* <span
               className="roundBorder"
               onClick={() => {
                 remove(product);
@@ -74,7 +100,7 @@ const Product = props => {
               }}
             >
               +{" "}
-            </span>
+            </span> */}
           </div>
         </div>
       </div>

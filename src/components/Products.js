@@ -12,6 +12,7 @@ const Products = props => {
             addToCart={props.addToCart}
             removeFromCart={props.removeFromCart}
             cart={props.cart}
+            clearCartClicked={props.clearCartClicked}
           />
         ))}
     </>
